@@ -1,6 +1,7 @@
 - git:
     local-name: config_utilities
     uri: git@github.com:MIT-SPARK/config_utilities.git
+    version: archive/ros_noetic
 - git:
     local-name: kimera_pgmo
     uri: git@github.com:MIT-SPARK/Kimera-PGMO.git
