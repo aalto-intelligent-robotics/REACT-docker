@@ -33,6 +33,9 @@ services:
       - ./dsg_output:${DOCKER_HOME}/dsg_output
       - ./logs:${DOCKER_HOME}/logs
       - ./models/:${DOCKER_HOME}/models
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+
     privileged: true # GUI related
   devel:
     extends: base
