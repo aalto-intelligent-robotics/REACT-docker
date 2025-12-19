@@ -16,4 +16,4 @@ pytest
 torch==2.4.1
 torchvision==0.19.1
 tensorrt
-ultralytics
+ultralytics==8.3.133
