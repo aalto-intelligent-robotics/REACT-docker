@@ -21,7 +21,13 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
 
 RUN source $HOME/.cargo/env \
-    && cargo install --locked starship zellij eza bat ripgrep du-dust zoxide yazi-fm yazi-cli jless
+	&& rustup install 1.92.0
+
+RUN source $HOME/.cargo/env \
+	&& cargo +1.92.0 install --locked starship eza bat ripgrep du-dust zoxide jless
+
+RUN source $HOME/.cargo/env \
+	&& cargo +1.92.0 install --force --locked yazi-build
 
 RUN python3 -m pip install pynvim black flake8 cmakelang
 
